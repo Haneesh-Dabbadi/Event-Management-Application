@@ -1,0 +1,66 @@
+/* Global styles for body and general layout */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #32CD32, 0 0 10px #32CD32, 0 0 20px #00FF7F;
+  }
+  100% {
+    text-shadow: 0 0 20px #7FFF00, 0 0 30px #00FF7F, 0 0 40px #7FFF00;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .event-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-card {
+    width: 90%;
+  }
+
+  form {
+    width: 95%;
+  }
+
+  input {
+    width: 95%;
+  }
+}

@@ -1,0 +1,131 @@
+/* Form container with a gradient and hover effect */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 10px;
+    gap: 15px;
+    background: linear-gradient(to right, #308bdb, #4eb52f, #123fb2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 99, 71, 0.5);
+  }
+  
+  /* Input fields with focus animations */
+  input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background: #ffffff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  input:focus {
+    box-shadow: 0 0 10px #FFD700;
+  }
+  
+  /* Animated submit button */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #7b0f79, #57b90b);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    height: 50px;
+    margin-right: 2px;
+    margin-top: 5px;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #7CFC00, #228B22);
+    transform: translateY(-3px);
+  }
+
+  
+/* List container for displaying cards */
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Individual event cards with animations */
+  .event-card {
+    background: linear-gradient(to right, #202e34, #2d2307);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    color: white;
+    position: relative;
+    animation: slideIn 0.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Title inside the event card */
+  .event-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Date styling for the event */
+  .event-date {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #dddddd;
+  }
+  
+  /* Button container for actions */
+  .event-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Delete button styling */
+  .delete-btn {
+    background: linear-gradient(to right, #FF6347, #FF4500);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    height: 50px;
+    margin-right: 2px;
+    margin-top: 5px;
+  }
+  
+  .delete-btn:hover {
+    background: linear-gradient(to right, #FF4500, #190ca5);
+  }
+  
+  /* Animation for cards */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
