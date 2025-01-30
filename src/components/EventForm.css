@@ -10,6 +10,11 @@ form {
     background: linear-gradient(to right, #308bdb, #4eb52f, #123fb2);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-left: 700px;
+    position: fixed;
+    margin-bottom: 70px;
+    height: fit-content;
+    width: 400px;
   }
   
   form:hover {
@@ -17,7 +22,6 @@ form {
     box-shadow: 0 15px 30px rgba(255, 99, 71, 0.5);
   }
   
-  /* Input fields with focus animations */
   input {
     padding: 10px;
     width: 100%;
@@ -54,20 +58,29 @@ form {
   }
 
   
-/* List container for displaying cards */
 .event-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    justify-content: start;
+    margin-left: 0px;
+    max-width: 600px;
     gap: 20px;
-    justify-content: center;
+    flex-grow: 1;
+    margin-top: 0px;
+
   }
   
-  /* Individual event cards with animations */
+  
   .event-card {
     background: linear-gradient(to right, #202e34, #2d2307);
     border-radius: 10px;
+    
     padding: 20px;
-    width: 300px;
+    margin: 0;
+    align-items: flex-end;
+    
+    width: auto;
     color: white;
     position: relative;
     animation: slideIn 0.5s ease-in-out;

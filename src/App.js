@@ -4,6 +4,7 @@ import axios from 'axios';
 import EventForm from './components/EventForm';
 import EventList from './components/EventList';
 import './App.css'
+import bgimage from "./images/backgroundimage.jpg"
 
 
 const App = () => {
