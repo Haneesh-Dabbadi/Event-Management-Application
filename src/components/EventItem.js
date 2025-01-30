@@ -1,4 +1,4 @@
-// src/EventItem.js
+
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 
