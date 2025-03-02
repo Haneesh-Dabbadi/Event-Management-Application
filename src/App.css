@@ -1,98 +1,372 @@
+/* Enhanced App.css with more vibrant colors and neater design */
 
-body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: right;
-  background-image: url('./images/backgroundimage.jpg');
-  background-position: center;
-  background-size: cover;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-h2{
-  background: linear-gradient(#afe435,#49b4bd, #8ea21f);
-  background-clip: text;
-  color: transparent;
-  position: fixed; 
-  top: 20px; 
-  right: 70px; 
-  transform: translateX(0); 
-  z-index: 10; 
-  
-  
-}
-
+/* Main container with a more vibrant gradient background */
 .main-container {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(45deg, 
+    #ff5f6d 0%, 
+    #ffc371 25%, 
+    #a17fe0 50%, 
+    #5d26c1 75%, 
+    #00b4db 100%);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 1100px;
-  padding: 20px;
-  min-height: 100vh;
-  gap: 30px;
+  align-items: center;
   position: relative;
-  padding: 120px 20px 20px; 
-  margin-left: 20px;
-
+  overflow: hidden;
 }
 
+/* Animated gradient background */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
+/* Geometric pattern overlay for visual interest */
+.main-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(255, 255, 255, 0.07) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.07) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.07) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.07) 75%);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+}
 
+/* App title with neon effect */
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  animation: fadeIn 1.5s ease-in;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #ffffff;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #0073e6,
+    0 0 20px #0073e6,
+    0 0 25px #0073e6;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 2px;
 }
 
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px #32CD32, 0 0 10px #32CD32, 0 0 20px #00FF7F;
-  }
-  100% {
-    text-shadow: 0 0 20px #7FFF00, 0 0 30px #00FF7F, 0 0 40px #7FFF00;
-  }
+/* Form with more vibrant gradient and neater appearance */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  border-radius: 15px;
+  gap: 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #00c6ff);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(0, 114, 255, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 350px;
+  z-index: 5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
+form:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(0, 114, 255, 0.6);
+}
+
+/* Form label styling */
+form label {
+  font-weight: bold;
+  color: white;
+  margin-bottom: -5px;
+  align-self: flex-start;
+}
+
+/* Improved input styling */
+input {
+  padding: 12px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+
+/* Enhanced button styling */
+button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ff3e9d, #0077ff);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: auto;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(to right, #ff3e9d, #9c27b0);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Form submit button alignment */
+form button {
+  align-self: center;
+  margin-top: 15px;
+  width: auto;
+}
+
+/* Improved event list layout */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  max-width: 650px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+/* More vibrant event cards */
+.event-card {
+  background: linear-gradient(135deg, #2c3e50, #4a569d);
+  border-radius: 15px;
+  padding: 25px;
+  color: white;
+  position: relative;
+  animation: slideIn 0.5s ease-in-out;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(74, 86, 157, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #ff3e9d, #0077ff);
+}
+
+.event-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(74, 86, 157, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Event info styling */
+.event-info {
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+/* Enhanced title inside the event card */
+.event-title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.event-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #ff3e9d, #0077ff);
+  border-radius: 3px;
+}
+
+/* Enhanced date styling */
+.event-date {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #e6e6e6;
+  font-size: 1.1rem;
+  display: block;
+}
+
+/* Reminder paragraph */
+.rem-para {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  margin: 0;
+  color: #32CD32;
+  font-weight: bold;
+}
+
+/* Button container for actions */
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.event-actions button {
+  flex: 1;
+  min-width: 80px;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Delete button styling */
+.delete-btn {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+.delete-btn:hover {
+  background: linear-gradient(to right, #ff416c, #7928ca);
+}
+
+/* Improved loading message */
+.loading-message {
+  font-size: 1.3rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 18px 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  margin-top: 25px;
+  animation: pulse 1.5s infinite;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.7; transform: scale(1); }
+}
+
+/* Enhanced card animation */
+@keyframes slideIn {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+  form {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 90%;
+    max-width: 550px;
+    margin-bottom: 35px;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .event-list {
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    max-width: 650px;
+    padding-left: 0;
+    margin-left: 0;
   }
 }
 
 @media (max-width: 768px) {
-  body{
-    background-image: url('./images/phonebg.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
+  .main-container {
+    padding: 20px;
   }
-  h2{
-    background: linear-gradient(#afe435,#49b4bd, #8ea21f);
-  background-clip: text;
-  color: transparent;
+  
+  h2 {
+    font-size: 2.5rem;
   }
-  .event-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .event-card {
-    width: 90%;
-  }
-
+  
   form {
     width: 95%;
+    padding: 25px;
   }
+  
+  .event-card {
+    padding: 20px;
+  }
+  
+  .event-list {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+  
+  .event-actions {
+    flex-direction: column;
+  }
+}
 
-  input {
-    width: 95%;
-  }
+/* Add a special effect for empty event-list */
+.event-list:empty::after {
+  content: "No events yet. Add your first event!";
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Animation for floating elements */
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, 15px) rotate(5deg); }
+  50% { transform: translate(0, 25px) rotate(0deg); }
+  75% { transform: translate(-10px, 15px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
 }
